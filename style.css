@@ -339,11 +339,13 @@ span {
 }
 @media screen and (max-width: 600px) {
     .html, .css, .js {
-        width: 100%;
+        width: 95%;
+        margin-top: 2px;
     }
     .skill {
     flex-direction: column;
     gap: 10px;
+    margin-top: 15px;
     }
 }
 
