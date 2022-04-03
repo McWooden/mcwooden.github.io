@@ -227,11 +227,21 @@ span {
     overflow: hidden;
 }
 .skill {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     cursor: default;
+}
+.html:hover span::before, .html:hover span::after {
+    opacity: 1;
+}
+.css:hover span::before, .css:hover span::after {
+    opacity: 1;
+}
+.js:hover span::before, .js:hover span::after {
+    opacity: 1;
 }
 .html, .css, .js {
     width: 30%;
@@ -248,6 +258,17 @@ span {
 .html:hover, .css:hover, .js:hover {
     color: white;
     background-color: #444;
+}
+.skill span::before, .skill span::after{
+    color: orange;
+    opacity: 0;
+    transition: .5s;
+}
+.skill span::before {
+    content: '<';
+}
+.skill span::after {
+    content: '/>';
 }
 .progress {
     background-color: #111;
@@ -348,6 +369,35 @@ span {
     margin-top: 15px;
     }
 }
+/* Projects */
+#projects {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #444;
+    min-height: 50vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+    height: 35vh;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card-header {
+    flex: 4;
+    background-color: white;
+}
+.card-body {
+    flex: 1;
+    background-color: #222;
+}
+
+
+
+
 
 /* Contact */
 #contact {
@@ -502,6 +552,8 @@ hr.tiga {
 
 /* Icon */
 .icon {
+    display: flex;
+    gap: 5px;
     cursor: default;
     background-color: transparent !important;
     opacity: 0;
@@ -512,14 +564,16 @@ hr.tiga {
 }
 .icon a {
     text-decoration: none;
+    fill: #eee;
+    transition: 300ms;
 }
 .icon a > * {
     width: 25px;
     cursor: pointer;
 }
 .icon a:hover {
-    opacity: 0.5;
-    color: white;
+    opacity: 0.7;
+    transform: translateY(2px);
 }
 @keyframes link {
     from {opacity: 0;}
@@ -541,7 +595,6 @@ footer {
     width: 100px;
     height: 100px;
     background-color: white;
-    z-index: 5;
     transition: 300ms;
 }
 .partikel.wan {
