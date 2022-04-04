@@ -378,13 +378,15 @@ span {
     padding: 20px;
     background: linear-gradient(
         115deg,
-        rgba(58, 58, 158, 0.8),
-        rgba(136, 136, 206, 0.7)
+        rgba(39, 39, 46, 0.8),
+        rgba(75, 77, 60, 0.7)
     ),url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
     background-size: cover;
     background-attachment: fixed;
 }
-
+#projects a {
+    text-decoration: none;
+}
 .card {
     display: flex;
     flex-direction: column;
@@ -444,9 +446,15 @@ span {
         justify-content: center;
     }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 659px) {
+    .card-header {
+        background-position: center !important;
+    }
+}
+@media screen and (max-width: 305px) {
     .card {
-        width: 500px;
+        width: 20vh;
+        height: 25vh;
     }
 }
 /* Contact */
