@@ -102,7 +102,6 @@ buatKotak = () => {
     particle.style.top = Math.random() * innerHeight + 'px'
     particle.style.left = Math.random() * innerWidth + 'px'
 
-    // let bgParticle = colors[Math.floor(Math.random() * colors.length)];
     particle.style.background = randomColors();
 
     jumbotron.appendChild(particle);

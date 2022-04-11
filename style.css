@@ -256,19 +256,8 @@ span {
     transition: 300ms;
 }
 .html:hover, .css:hover, .js:hover {
-    color: white;
+    color: rgb(255, 248, 205);
     background-color: #444;
-}
-.skill span::before, .skill span::after{
-    color: orange;
-    opacity: 0;
-    transition: .5s;
-}
-.skill span::before {
-    content: '<';
-}
-.skill span::after {
-    content: '/>';
 }
 .progress {
     background-color: #111;
@@ -440,6 +429,21 @@ span {
     color: white;
     font-size: 1.1em;
 }
+.card-body span::before, .card-body span::after{
+    color: orange;
+    opacity: 0;
+    transition: .5s;
+}
+.card-body span::before {
+    content: '<';
+}
+.card-body span::after {
+    content: '/>';
+}
+.card:hover .card-body span::before, 
+.card:hover .card-body span::after {
+    opacity: 1;
+}
 
 @media screen and (max-width: 1000px) {
     #projects {
@@ -498,8 +502,8 @@ hr.tiga {
     animation: sidebar 1s 1s forwards;
     cursor: default;
 }
-.contact-sidebar > *:hover{
-    background-color: #444;
+.icon-info {
+    fill: goldenrod;
 }
 .contact-sidebar p svg {
     width: 10px;
@@ -533,6 +537,9 @@ hr.tiga {
     transition: 300ms;
     transform: scale(0.01);
     z-index: -1;
+}
+.contact-main h3 {
+    color: rgb(255, 250, 221) !important;
 }
 .contact-main input{
     background-color: rgba(68, 68, 68, 0.5);
@@ -602,6 +609,12 @@ hr.tiga {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr 4fr;
         grid-template-areas: 'title' 'sidebar' 'main';
+    }
+    .contact-sidebar > * {
+        width: 97%;
+    }
+    .contact-main input {
+        width: 100%;
     }
 }
 
