@@ -697,3 +697,23 @@ footer {
     opacity: 0.2;
     z-index: -1;
 }
+/* Form fetch */
+.alert-form {
+    box-sizing: border-box;
+    color: #222;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid rgb(75, 75, 75);
+    opacity: 0;
+    transition: 0.3s;
+}
+.alertSuccess {
+    opacity: 1;
+    color: greenyellow;
+    border-color: greenyellow;
+}
+.alertError {
+    opacity: 1;
+    color: rgb(236, 81, 81);
+    border-color: rgb(236, 81, 81);
+}
