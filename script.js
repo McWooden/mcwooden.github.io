@@ -91,7 +91,6 @@ boxShadow = (e) => {
         '0 0 5px ' + randomColors()
     }, 3000)
 }
-
 buatKotak = () => {
     const particle = document.createElement('particle')
 
@@ -109,9 +108,27 @@ buatKotak = () => {
         particle.remove()
     },7500)
 }
-setInterval(buatKotak, 1000)
-
+let addParticle = setInterval(buatKotak, 1000);
+window.addEventListener('scroll', () => {
+    if (window.scrollY == 0) {
+        addParticle = setInterval(buatKotak, 1000)
+    } else {
+        clearInterval(addParticle)
+    }
+})
 // About
+const html = document.querySelector('.html')
+const css = document.querySelector('.css')
+const js = document.querySelector('.js')
+const htmlBar = document.querySelector('.htmlBar')
+const cssBar = document.querySelector('.cssBar')
+const jsBar = document.querySelector('.jsBar')
+// projects
+const tribute = document.getElementById('tribute')
+const miniGames = document.getElementById('miniGames')
+const landing = document.getElementById('landing')
+const personal = document.getElementById('personal')
+
 
 // Contact
 let inputForm = document.querySelectorAll('input')
@@ -146,13 +163,6 @@ inputForm.forEach(e => e.addEventListener('keypress', () => {
         e.style.boxShadow = '0 0 0 white'
     }, 5000)
 }))
-// Partikel
-let partikel = document.getElementsByClassName('partikel')
-window.addEventListener('scroll', ()=>{
-    partikel[0].style.transform = 'translateY('+paralax(0.28)+'px) rotate(30deg)'
-    partikel[1].style.transform = 'translateY('+paralax(0.19)+'px) rotate(-47deg)'
-    partikel[2].style.transform = 'translateY('+paralax(0.25)+'px) rotate(-50deg)'
-})
 // Typewriter
 let writer = document.getElementsByClassName('typewriter');
 let typingsatu = 0;
@@ -178,6 +188,7 @@ typeWriterdua = () => {
             typeWriterdua()
         },150)
     }
+
 }
 typeWritertiga = () => {
     if (typingtiga < txt3.length) {
@@ -193,3 +204,38 @@ setTimeout(()=>{
     typeWriterdua()
     typeWritertiga()
 }, 300)
+
+
+window.addEventListener('scroll', () => {
+    // Skill
+    if (window.scrollY >= html.offsetHeight) {
+        htmlBar.style.width = '50%'
+    }
+    if (window.scrollY >= css.offsetHeight) {
+        cssBar.style.width = '40%'
+    }
+    if (window.scrollY >= js.offsetHeight) {
+        jsBar.style.width = '30%'
+    }
+    // project
+    if (window.scrollY >= tribute.offsetHeight) {
+        tribute.style.opacity = 1
+        tribute.style.transform = 'translateY(0)'
+    }
+    if (window.scrollY >= miniGames.offsetHeight) {
+        miniGames.style.opacity = 1
+        miniGames.style.transition = '1.4s'
+        miniGames.style.transform = 'translateY(0)'
+    }
+    if (window.scrollY >= landing.offsetHeight) {
+        landing.style.opacity = 1
+        landing.style.transition = '1.8s'
+        landing.style.transform = 'translateY(0)'
+    }
+    if (window.scrollY >= personal.offsetHeight) {
+        personal.style.opacity = 1
+        personal.style.transition = '2.2s'
+        personal.style.transform = 'translateY(0)'
+    }
+    
+})
