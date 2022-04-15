@@ -193,7 +193,7 @@ nav {
     width: 80%;
     color: white;
     margin: 0 auto 0;
-    padding: 50px 0 0 0;
+    padding: 25px 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: fit-content;
 }
@@ -283,10 +283,6 @@ span {
 
 /* Projects */
 #projects {
-    background: url(img/mountainBg.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: bottom;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -339,7 +335,6 @@ span {
 .card h4 {
     font-size: 1.7em;
     font-weight: 800;
-    /* background-color: #f1c40fe5; */
     text-shadow: 1px 1px rgba(0,0,0,0.7);
     padding: 1px;
     border-radius: 2px;
@@ -360,7 +355,7 @@ span {
     transition: 1s;
     opacity: .9;
 }
-.card:hover h4 {
+/* .card:hover h4 {
     transform: translateX(50vh) rotateY(45deg);
 }
 .card:hover p {
@@ -374,10 +369,7 @@ span {
 .card:hover {
     transition: 1s ease-out;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), inset 0 0 500px rgba(0, 0, 0, 0);
-}
-
-
-
+} */
 @media screen and (max-width: 1000px) {
     #projects {
         justify-content: center;
