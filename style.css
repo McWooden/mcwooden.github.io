@@ -93,7 +93,6 @@ nav {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     margin-top: 30px;
     border: 5px solid white;
-    transition: 500ms;
     margin-bottom: 10px;
     position: relative;
     padding: 1px;
@@ -124,8 +123,8 @@ nav {
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     cursor: grab;
-    transition: 300ms;
-    border-top: 1px solid rgba(255, 255, 255, .5);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .jumbotron > *:active {
     cursor: grabbing;
@@ -215,7 +214,17 @@ span {
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.1);
 }
-
+.myName a {
+    color: white;
+    text-decoration: none;
+    padding: 1px 10px;
+    border-radius: 5px;
+    transition: .3s;
+}
+.myName a:hover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgb(167, 27, 167);
+}
 
 .mySkill {
     width: 80%;
@@ -338,6 +347,7 @@ span {
     text-shadow: 1px 1px rgba(0,0,0,0.7);
     padding: 1px;
     border-radius: 2px;
+    background-color: #f1c40fe5;
 }
 .card p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
