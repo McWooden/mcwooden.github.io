@@ -227,6 +227,17 @@ span {
     width: 80%;
     overflow: hidden;
 }
+.skill-icon {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+.skill-icon > * {
+    width: 25px;
+    height: 25px;
+    fill: white;
+    backdrop-filter: blur(5px);
+}
 .skill {
     margin-top: 20px;
     margin-bottom: 20px;
