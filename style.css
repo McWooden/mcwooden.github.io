@@ -31,7 +31,6 @@ nav {
     display: flex;
     background-color: rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, .5);
-    border-left: 1px solid rgba(255, 255, 255, .5);
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     position: absolute;
@@ -72,10 +71,7 @@ nav {
 }
 /* Jumbotron */
 .jumbotron {
-    background: url(img/mountainBg.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: bottom;
+    background-color: #444;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,12 +93,21 @@ nav {
     position: relative;
     padding: 1px;
     animation: borderUp 2s infinite;
-    cursor: grab;
+    transition: .5s;
 }
 .jumbotron img:hover {
     background-color: rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
     animation: borderUp 1s infinite;
+}
+.jumbotron h1, .jumbotron p {
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: .5s;
 }
 .jumbotron h1 {
     padding: 4px;
@@ -116,15 +121,6 @@ nav {
 }
 .jumbotron p:hover {
     opacity: 1;
-}
-.jumbotron h1, .jumbotron p {
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    cursor: grab;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 .jumbotron > *:active {
     cursor: grabbing;
@@ -217,13 +213,14 @@ span {
 .myName a {
     color: white;
     text-decoration: none;
-    padding: 1px 10px;
-    border-radius: 5px;
+    padding: 1px 10px 4px;
+    border-radius: 3px;
     transition: .3s;
+    background-color: rgb(146, 0, 146);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.295);
 }
 .myName a:hover {
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    background-color: rgb(167, 27, 167);
+    background-color: rgb(110, 8, 110);
 }
 
 .mySkill {
@@ -365,7 +362,7 @@ span {
     transition: 1s;
     opacity: .9;
 }
-/* .card:hover h4 {
+.card:hover h4 {
     transform: translateX(50vh) rotateY(45deg);
 }
 .card:hover p {
@@ -379,7 +376,7 @@ span {
 .card:hover {
     transition: 1s ease-out;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), inset 0 0 500px rgba(0, 0, 0, 0);
-} */
+}
 @media screen and (max-width: 1000px) {
     #projects {
         justify-content: center;
