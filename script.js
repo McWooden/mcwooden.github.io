@@ -132,7 +132,7 @@ css.addEventListener('click', () => {
     skillInfo.innerHTML = '<p><span>Januari 2022 </span>saya mulai kepengen sertifikat waktu itu saya taunya <a href="https://www.freecodecamp.org/">FreeCodeCamp</a> gass lah belajar<p><br><p>Tapi 4 hari belajar di freecodecamp pake bahasa inggris susah jugak pahamnya. Akhirnya saya menemukan tutorial youtube <a href="https://www.youtube.com/c/WebProgrammingUNPAS">Web WebProgrammingUNPAS</a> sangat membantu saya belajar otodidak behhh mantap dah, kalian kalo programmer otodidak pasti tau pak Sandhika Galih, saya ngikutin playlist FrontEnd nya sampe tamat sampe bisa posting ini Portfolio di github gg dahh. tamatnya sekitar 3 bulan</p><br><p>selesai ngikut playlist frontEnd WPU saya coba lanjutin FreeCodeCamp dan ngelanjutin project sampe dapet sertifikat <a href="https://www.freecodecamp.org/certification/Hudd1nGt/responsive-web-design">Responsive Web Design</a></p>'
 })
 js.addEventListener('click', () => {
-    '<p>Sama dari cerita CSS sebelumnya saya juga dah dapet sertifikat <a href="https://www.freecodecamp.org">FreeCodeCamp</a> tapi yang Javascriptnya. <a href="https://www.freecodecamp.org/certification/Hudd1nGt/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a></p>'
+    skillInfo.innerHTML = '<p>Sama dari cerita CSS sebelumnya saya juga dah dapet sertifikat <a href="https://www.freecodecamp.org">FreeCodeCamp</a> tapi yang Javascriptnya. <a href="https://www.freecodecamp.org/certification/Hudd1nGt/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a></p>'
 })
 // projects
 const tribute = document.getElementById('tribute')

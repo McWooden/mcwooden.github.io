@@ -227,7 +227,7 @@ span {
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 5fr 12fr;
-    grid-template-rows: .8fr 2.5fr;
+    grid-template-rows: 7vh 2.5fr;
     grid-template-areas: 
     'headSkill headSkill headSkill'
     'skillIcon skillBar skillInfo';
@@ -312,10 +312,11 @@ span {
     color: #eee;
 }
 .skillInfo a {
-    color: #eee;
+    color: goldenrod;
 }
 .skillInfo span {
     font-weight: 800;
+    color: gold;
 }
 @media screen and (max-width: 600px) {
     .mySkill {
