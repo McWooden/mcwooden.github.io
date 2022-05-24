@@ -123,6 +123,17 @@ const js = document.querySelector('.js')
 const htmlBar = document.querySelector('.htmlBar')
 const cssBar = document.querySelector('.cssBar')
 const jsBar = document.querySelector('.jsBar')
+let skillInfo = document.querySelector('.skillInfo')
+
+html.addEventListener('click', () => {
+    skillInfo.innerHTML = '<p><span>July 2021 </span>saya mulai nulis "hello world" di aplikasi namanya <a href="https://getmimo.com/">mimo</a>, pakai bahasa inggris susah gabisa bahasa inggris dulu</p><br><p>Saya dapet skill bahasa inggris sedikit karna dulu masi males malesnya hehe</p><br><p>Selesai ngerjain sampe complete web development tu streak 168 hari <span>Januari 2022</span></p>'
+})
+css.addEventListener('click', () => {
+    skillInfo.innerHTML = '<p><span>Januari 2022 </span>saya mulai kepengen sertifikat waktu itu saya taunya <a href="https://www.freecodecamp.org/">FreeCodeCamp</a> gass lah belajar<p><br><p>Tapi 4 hari belajar di freecodecamp pake bahasa inggris susah jugak pahamnya. Akhirnya saya menemukan tutorial youtube <a href="https://www.youtube.com/c/WebProgrammingUNPAS">Web WebProgrammingUNPAS</a> sangat membantu saya belajar otodidak behhh mantap dah, kalian kalo programmer otodidak pasti tau pak Sandhika Galih, saya ngikutin playlist FrontEnd nya sampe tamat sampe bisa posting ini Portfolio di github gg dahh. tamatnya sekitar 3 bulan</p><br><p>selesai ngikut playlist frontEnd WPU saya coba lanjutin FreeCodeCamp dan ngelanjutin project sampe dapet sertifikat <a href="https://www.freecodecamp.org/certification/Hudd1nGt/responsive-web-design">Responsive Web Design</a></p>'
+})
+js.addEventListener('click', () => {
+    '<p>Sama dari cerita CSS sebelumnya saya juga dah dapet sertifikat <a href="https://www.freecodecamp.org">FreeCodeCamp</a> tapi yang Javascriptnya. <a href="https://www.freecodecamp.org/certification/Hudd1nGt/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a></p>'
+})
 // projects
 const tribute = document.getElementById('tribute')
 const miniGames = document.getElementById('miniGames')
@@ -209,13 +220,13 @@ setTimeout(()=>{
 window.addEventListener('scroll', () => {
     // Skill
     if (window.scrollY >= html.offsetHeight) {
-        htmlBar.style.width = '50%'
+        htmlBar.style.width = '55%'
     }
     if (window.scrollY >= css.offsetHeight) {
-        cssBar.style.width = '40%'
+        cssBar.style.width = '45%'
     }
     if (window.scrollY >= js.offsetHeight) {
-        jsBar.style.width = '30%'
+        jsBar.style.width = '35%'
     }
     // project
     if (window.scrollY >= tribute.offsetHeight) {

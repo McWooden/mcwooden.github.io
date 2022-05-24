@@ -185,7 +185,7 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
+    min-width: 100vw;
     color: white;
     margin: 0 auto 0;
     padding: 25px 0;
@@ -225,12 +225,23 @@ span {
 
 .mySkill {
     width: 80%;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 5fr 12fr;
+    grid-template-rows: .8fr 2.5fr;
+    grid-template-areas: 
+    'headSkill headSkill headSkill'
+    'skillIcon skillBar skillInfo';
+    row-gap: 0.3vh;
+}
+.mySkill-header {
+    grid-area: headSkill;
 }
 .skill-icon {
+    grid-area: skillIcon;
     display: flex;
+    align-content: center;
     flex-wrap: wrap;
-    margin-top: 15px;
+    flex-direction: column;
 }
 .skill-icon > * {
     width: 25px;
@@ -239,15 +250,15 @@ span {
     backdrop-filter: blur(5px);
 }
 .skill {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    grid-area: skillBar;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     cursor: default;
+    gap: .2em;
 }
 .html, .css, .js {
-    width: 30%;
+    width: 80%;
     height: fit-content;
     color: #eee;
     padding: 5px;
@@ -258,6 +269,9 @@ span {
     transition: 300ms;
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, .5);
+}
+.html:hover, .css:hover, .js:hover {
+    cursor: pointer;
 }
 .progress {
     background-color: rgba(17, 17, 17, 0.849);
@@ -284,15 +298,48 @@ span {
     width: 0%;
     height: 10px;
 }
+.skillInfo {
+    grid-area: skillInfo;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: calc(100% - 3vh);
+    height: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto;
+}
+.skillInfo p {
+    font-weight: 100;
+    color: #eee;
+}
+.skillInfo a {
+    color: #eee;
+}
+.skillInfo span {
+    font-weight: 800;
+}
 @media screen and (max-width: 600px) {
+    .mySkill {
+        grid-template-columns: auto;
+        grid-template-rows: 8vh 5vh  1fr 1.5fr;
+        grid-template-areas: 
+        'headSkill'
+        'skillIcon'
+        'skillBar'
+        'skillInfo';
+        gap: 5px;
+    }
+    .skillInfo {
+        width: calc(100% - 3vh);
+    }
+    .skill-icon {
+        align-content: flex-start;
+    }
     .html, .css, .js {
         width: 95%;
         margin-top: 2px;
     }
     .skill {
     flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
     }
 }
 
@@ -664,4 +711,9 @@ footer a {
     opacity: 1;
     color: rgb(236, 81, 81);
     border-color: rgb(236, 81, 81);
+}
+@media (max-width: 600px) {
+    .alert-form {
+        margin: 5px 0;
+    }
 }
