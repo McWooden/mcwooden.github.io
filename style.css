@@ -321,7 +321,7 @@ span {
 @media screen and (max-width: 600px) {
     .mySkill {
         grid-template-columns: auto;
-        grid-template-rows: 8vh 5vh  1fr 1.5fr;
+        grid-template-rows: 8vh 5vh auto 1.5fr;
         grid-template-areas: 
         'headSkill'
         'skillIcon'
