@@ -27,7 +27,9 @@ icon saya pake SVG karna gatau cara kerjanya fontAwesome dah ku cek sana sini sa
 >> link channel
 efek partikel:
 https://www.youtube.com/c/OnlineTutorials4Designers
+
 layout jumbotron dan data contact tersimpan di google sheet:
 https://www.youtube.com/c/WebProgrammingUNPAS
+
 scrollBar:
 https://www.youtube.com/kepowob
