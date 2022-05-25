@@ -226,7 +226,7 @@ span {
 .mySkill {
     width: 80%;
     display: grid;
-    grid-template-columns: 1fr 5fr 12fr;
+    grid-template-columns: auto 5fr 12fr;
     grid-template-rows: 7vh 2.5fr;
     grid-template-areas: 
     'headSkill headSkill headSkill'
@@ -239,7 +239,6 @@ span {
 .skill-icon {
     grid-area: skillIcon;
     display: flex;
-    align-content: center;
     flex-wrap: wrap;
     flex-direction: column;
 }
@@ -256,6 +255,15 @@ span {
     align-items: center;
     cursor: default;
     gap: .2em;
+}
+.certificate-icon {
+    width: .5rem;
+    fill: goldenrod;
+}
+.css>*,.js>* {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .html, .css, .js {
     width: 80%;
@@ -502,8 +510,6 @@ span {
 .contact-sidebar p svg:hover {
     border-color: #444;
 }
-
-
 .contact-main {
     grid-area: main;
     color: rgb(255, 255, 255);
@@ -577,7 +583,7 @@ span {
         background-color: transparent;
     }
     100% {
-        background-color: #222;
+        background-color: rgba(34, 34, 34, 0.801);
     }
 }
 
@@ -633,9 +639,20 @@ span {
 
 
 /* footer */
+#highLight {
+    background-color: transparent;
+    font-style: italic;
+    color: goldenrod;
+    text-align: center;
+    font-weight: 400;
+    font-size: 5vh;
+    margin: 10vh auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 0.2;
+    font-weight: 100;
+}
 footer {
     color: #555;
-    margin-top: 80px;
     text-align: center;
     padding: 10px;
     font-size: 0.8em;
