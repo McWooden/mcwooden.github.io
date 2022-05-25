@@ -216,11 +216,11 @@ span {
     padding: 1px 10px 4px;
     border-radius: 3px;
     transition: .3s;
-    background-color: rgb(146, 0, 146);
+    background-color: goldenrod;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.295);
 }
 .myName a:hover {
-    background-color: rgb(110, 8, 110);
+    background-color: rgb(172, 130, 26);
 }
 
 .mySkill {
@@ -588,7 +588,7 @@ span {
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr 4fr;
+        grid-template-rows: auto;
         grid-template-areas: 'title' 'sidebar' 'main';
     }
     .contact-sidebar > * {
