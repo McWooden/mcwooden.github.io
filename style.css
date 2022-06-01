@@ -71,7 +71,7 @@ nav {
 }
 /* Jumbotron */
 .jumbotron {
-    background-color: #444;
+    background-image: url(img/Simple\ Shiny.svg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -260,7 +260,7 @@ span {
     width: .5rem;
     fill: goldenrod;
 }
-.css>*,.js>* {
+.html>*,.css>*,.js>* {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -351,9 +351,6 @@ span {
     flex-direction: column;
     }
 }
-
-
-
 /* Projects */
 #projects {
     display: flex;
@@ -467,15 +464,12 @@ span {
     'title title'
     'sidebar main';
 }
-
-
 .contact-title {
     grid-area: title;
     color: white;
     padding: 10px;
     cursor: default;
 }
-
 .contact-sidebar {
     grid-area: sidebar;
     display: flex;
@@ -490,9 +484,9 @@ span {
     padding: 5px;
     border-radius: 5px;
     transition: 300ms;
-    animation: sidebar 1s 1s forwards;
     cursor: default;
     box-shadow: inset 1px 1px rgba(255, 255, 255, 0.1), inset -1px -1px rgba(0, 0, 0, 0.3);
+    animation: sidebar 1s 1s forwards;
 }
 .icon-info {
     fill: goldenrod;
@@ -614,7 +608,6 @@ span {
     cursor: default;
     background-color: transparent !important;
     opacity: 0;
-    animation: link 1s 2s forwards;
 }
 .icon:hover {
     background-color: transparent;

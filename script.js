@@ -132,17 +132,17 @@ const turnOffBorderSkill = () => {
 }
 
 html.addEventListener('click', () => {
-    skillInfo.innerHTML = '<p><span>July 2021 </span>saya mulai nulis "hello world" di aplikasi namanya <a href="https://getmimo.com/">mimo</a>, pakai bahasa inggris susah gabisa bahasa inggris dulu</p><br><p>Saya dapet skill bahasa inggris sedikit karna dulu masi males malesnya hehe</p><br><p>Selesai ngerjain sampe complete web development tu streak 168 hari <span>Januari 2022</span></p>'
+    skillInfo.innerHTML = '<p><span>HTML</span> hmmm... ku dah belajar html dari 2021 pake aplikasi <a href="https://getmimo.com/" target="_blank">Mimo</a> sama youtube <a href="https://www.youtube.com/c/WebProgrammingUNPAS" target="_blank">WPU</a>.</p><br><p>habis tu 2022 belajar HTML5 di <a href="https://www.sololearn.com/profile/25969895" target="_blank">SoloLearn</a> sama <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a>.</p><p>dapet sertifikat <a href="https://www.sololearn.com/Certificate/1014-25969895/jpg/" target="_blank">HTML</a> di <a href="https://www.sololearn.com/profile/25969895" target="_blank">SoloLearn</a></p>'
     turnOffBorderSkill()
     html.style.borderColor = 'goldenrod'
 })
 css.addEventListener('click', () => {
-    skillInfo.innerHTML = '<p><span>Januari 2022 </span>saya mulai kepengen sertifikat waktu itu saya taunya <a href="https://www.freecodecamp.org/">FreeCodeCamp</a> gass lah belajar<p><br><p>Tapi 4 hari belajar di freecodecamp pake bahasa inggris susah jugak pahamnya. Akhirnya saya menemukan tutorial youtube <a href="https://www.youtube.com/c/WebProgrammingUNPAS">Web WebProgrammingUNPAS</a> sangat membantu saya belajar otodidak behhh mantap dah, kalian kalo programmer otodidak pasti tau pak Sandhika Galih, saya ngikutin playlist FrontEnd nya sampe tamat sampe bisa posting ini Portfolio di github gg dahh. tamatnya sekitar 3 bulan</p><br><p>selesai ngikut playlist frontEnd WPU saya coba lanjutin FreeCodeCamp dan ngelanjutin project sampe dapet sertifikat <a href="https://www.freecodecamp.org/certification/Hudd1nGt/responsive-web-design">Responsive Web Design</a></p>'
+    skillInfo.innerHTML = '<p><span>CSS</span> hmmm jugak...</p><p>Pertama kali belajar 2021 di <a href="https://getmimo.com/" target="_blank">Mimo</a> sampe tamat. Tapi karna gabisa bahasa inggris 2022 saya coba belajar di youtube <a href="https://www.youtube.com/c/WebProgrammingUNPAS" target="_blank">WPU</a> karena pake bahasa indonesia, dulu kurang ngerti bahasa inggris.</p><br><p>Terus pengen dapet sertifikat ku belajar lagi di <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a> dan dapet sertifikat pertama <a href="https://www.freecodecamp.org/certification/Hudd1nGt/responsive-web-design">Responsive Web Design</a>.</p><br><p>karena merasa pro... hehe... saya speedrun css dua jam di <a href="https://www.sololearn.com/profile/25969895" target="_blank">SoloLearn</a> dan dapet sertifikat <a href="https://www.sololearn.com/Certificate/1023-25969895/jpg/" target="_blank">CSS</a>nya.</p>'
     turnOffBorderSkill()
     css.style.borderColor = 'goldenrod'
 })
 js.addEventListener('click', () => {
-    skillInfo.innerHTML = '<p>Sama dari cerita CSS sebelumnya saya juga dah dapet sertifikat <a href="https://www.freecodecamp.org">FreeCodeCamp</a> tapi yang Javascriptnya. <a href="https://www.freecodecamp.org/certification/Hudd1nGt/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a></p>'
+    skillInfo.innerHTML = '<p><span>Javascript</span> ku belajar karna biar kayak hengker hehe.</p><p>ku belajar di <a href="https://getmimo.com/" target="_blank">Mimo</a>, <a href="https://www.youtube.com/c/WebProgrammingUNPAS" target="_blank">WPU</a>, <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a> sampe dapet sertifikat <a href="https://www.freecodecamp.org/certification/Hudd1nGt/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a>.</p><p>merasa pro jugak saya speed run tiga jam di <a href="https://www.sololearn.com/profile/25969895">SoloLearn</a> dan dapet dah sertifikat <a href="https://www.sololearn.com/certificates/course/en/25969895/1024/landscape/png" target="_blank">Javascript</a>nya.</p><br><p>mwhhahahaha target ku jadi <span>JavaScript</span> expert.</p>'
     turnOffBorderSkill()
     js.style.borderColor = 'goldenrod'
 })
@@ -154,6 +154,7 @@ const personal = document.getElementById('personal')
 
 
 // Contact
+const icon = document.getElementById('icon')
 let inputForm = document.querySelectorAll('input')
 inputPlaceholder = (el) =>{
     if (el.value.length >= 1) {
@@ -230,34 +231,39 @@ setTimeout(()=>{
 
 
 window.addEventListener('scroll', () => {
+    console.log(window.innerWidth)
     // Skill
-    if (window.scrollY >= html.offsetHeight) {
+    if (window.scrollY - html.getBoundingClientRect().top >= 0) {
         htmlBar.style.width = '55%'
     }
-    if (window.scrollY >= css.offsetHeight) {
+    if (window.scrollY - css.getBoundingClientRect().top >= 0) {
         cssBar.style.width = '45%'
     }
-    if (window.scrollY >= js.offsetHeight) {
+    if (window.scrollY - js.getBoundingClientRect().top >= 0) {
         jsBar.style.width = '35%'
     }
+
     // project
-    if (window.scrollY >= tribute.offsetHeight) {
+    if (window.scrollY - tribute.getBoundingClientRect().top >= 0) {
         tribute.style.opacity = 1
         tribute.style.transform = 'translateY(0)'
     }
-    if (window.scrollY >= miniGames.offsetHeight) {
+    if (window.scrollY - miniGames.getBoundingClientRect().top >= 0) {
         miniGames.style.opacity = 1
         miniGames.style.transition = '1.4s'
         miniGames.style.transform = 'translateY(0)'
     }
-    if (window.scrollY >= landing.offsetHeight) {
+    if (window.scrollY - landing.getBoundingClientRect().top >= 0) {
         landing.style.opacity = 1
         landing.style.transition = '1.8s'
         landing.style.transform = 'translateY(0)'
     }
-    if (window.scrollY >= personal.offsetHeight) {
+    if (window.scrollY - personal.getBoundingClientRect().top >= 0) {
         personal.style.opacity = 1
         personal.style.transition = '2.2s'
         personal.style.transform = 'translateY(0)'
+    }
+    if (window.scrollY - icon.getBoundingClientRect().top >= 0) {
+        icon.style.animation = 'link 1s 1s forwards'
     }
 })
