@@ -83,7 +83,7 @@ nav {
     transition: 1s;
 }
 .jumbotron img {
-    border-radius: 50%;
+    border-radius: 5%;
     width: 30vh;
     height: 30vh;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
